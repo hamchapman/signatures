@@ -231,7 +231,7 @@ where
     C: Curve + CheckSignatureBytes,
     SignatureSize<C>: ArrayLength<u8>,
 {
-    fn from_bytes(bytes: &[u8]) -> Result<Self, Error> {
+    pub fn from_bytes(bytes: &[u8]) -> Result<Self, Error> {
         Self::try_from(bytes)
     }
 }
